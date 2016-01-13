@@ -16,6 +16,7 @@ vms:
       - 4-cpus
       - 2gb-memory
       - base
+      - setup_codemanager
 
   - name: gitlab-server
     box: puppetlabs/centos-6.6-64-nocm
@@ -35,6 +36,16 @@ vms:
       - trusted_fact_stash
       - el-stop-firewall
       - el-fix-path
+      - base
+
+  - name: centos6a
+    box: puppetlabs/centos-6.6-64-nocm
+    roles:
+      - agent
+      - el-stop-firewall
+      - el-fix-path
+      - 1gb-memory
+      - 4-cpus
       - base
 
 

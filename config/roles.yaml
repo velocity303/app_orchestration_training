@@ -38,6 +38,11 @@ roles:
       - type: shell
         inline: 'sleep 60; rm /etc/puppetlabs/code/environments/production/.git -f; /opt/puppetlabs/bin/r10k deploy environment -pv; sleep 60; /opt/puppetlabs/bin/puppet agent -t'
 
+  setup_codemanager:
+    provisioners:
+      - type: shell
+        inline: 'mkdir -p /etc/puppetlabs/puppetserver/ssh; ssh-keygen -t rsa -b 4096 -N "" -f /etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa'
+
   auto_net:
     private_networks:
       - ip: '0.0.0.0'
@@ -67,8 +72,13 @@ roles:
       - type: hosts
       - type: pe_bootstrap
         role: :master
-#        answer_extras:
-#          - "q_puppetmaster_r10k_remote='https://github.com/npwalker/control-repo.git'"
+        answer_extras:
+          - "q_puppetmaster_r10k_remote='https://github.com/velocity303/control-repo.git'"
+          - "q_puppetmaster_code_manager_auto_configure=y"
+          - "q_puppetmaster_r10k_private_key='/etc/puppetlabs/puppetserver/ssh/id-control_repo.rsa'"
+      - type: shell
+        path: 'scripts/deploy_repo.sh'
+
 
   agent:
     provisioners:
