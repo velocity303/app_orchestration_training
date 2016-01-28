@@ -14,7 +14,7 @@ vms:
       - el-stop-firewall
       - el-fix-path
       - 4-cpus
-      - 2gb-memory
+      - 4gb-memory
       - base
       - setup_codemanager
 
