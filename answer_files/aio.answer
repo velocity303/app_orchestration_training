@@ -44,4 +44,4 @@ q_verify_packages=y
 q_enable_future_parser=n
 q_pe_check_for_updates=n
 #nick's custom answers
-q_puppetmaster_r10k_remote='https://github.com/npwalker/control-repo.git'
+#q_puppetmaster_r10k_remote='https://github.com/npwalker/control-repo.git'
