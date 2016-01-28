@@ -18,27 +18,8 @@ vms:
       - base
       - setup_codemanager
 
-  - name: gitlab-server
-    box: puppetlabs/centos-6.6-64-nocm
-    roles:
-      - agent
-      - trusted_fact_gitlab
-      - el-stop-firewall
-      - el-fix-path
-      - 1gb-memory
-      - 4-cpus
-      - base
 
-  - name: stash-server
-    box: puppetlabs/centos-6.6-64-nocm
-    roles:
-      - agent
-      - trusted_fact_stash
-      - el-stop-firewall
-      - el-fix-path
-      - base
-
-  - name: centos6a
+  - name: node1
     box: puppetlabs/centos-6.6-64-nocm
     roles:
       - agent
@@ -47,6 +28,37 @@ vms:
       - 1gb-memory
       - 4-cpus
       - base
+
+ - name: node2
+    box: puppetlabs/centos-6.6-64-nocm
+    roles:
+      - agent
+      - el-stop-firewall
+      - el-fix-path
+      - 1gb-memory
+      - 4-cpus
+      - base
+
+ - name: node3
+    box: puppetlabs/centos-6.6-64-nocm
+    roles:
+      - agent
+      - el-stop-firewall
+      - el-fix-path
+      - 1gb-memory
+      - 4-cpus
+      - base
+
+ - name: node4
+    box: puppetlabs/centos-6.6-64-nocm
+    roles:
+      - agent
+      - el-stop-firewall
+      - el-fix-path
+      - 1gb-memory
+      - 4-cpus
+      - base
+
 
 
 
