@@ -30,10 +30,11 @@ git clone https://github.com/velocity303/app_orchestration_training.git
       - Clear and Defined Deployments for Infrastructure (Not only applications)
  2. Demonstration of App Orchestration Setup in detail (15 min)
     - Run through of key setup requirements:
+      - Create user for orchestration and assign correct permissions.
       - Orchestrator.conf
       - app_managmenet puppet.conf setting
-      - parameter in console for setup
-      - Use cached catalogs - Mirroring functionality of direct puppet.
+      - Change use_application_services from false to true in PE Infrastructure group in the console.
+      - Use cached catalogs - Mirroring functionality of direct puppet. Use puppet code for this?
       - Disable pluginsync
       - site{} block in site.pp - Importance and relation to Environment Scope
  3. Self runthrough of App Orchestration setup + initial snapshot of set up environment (10 min)
