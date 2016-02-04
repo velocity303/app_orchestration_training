@@ -16,7 +16,7 @@ git clone https://github.com/velocity303/app_orchestration_training.git
   $ vagrant plugin install vagrant-multiprovider-snap
 ```
 
-5. Bring up environment with vagrant up master
+5. Bring up environment with vagrant up puppet-master
 
 ### General Overview
  1. Slides Providing General Overview (10 min)
