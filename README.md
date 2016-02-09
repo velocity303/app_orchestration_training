@@ -12,7 +12,7 @@ git clone https://github.com/velocity303/app_orchestration_training.git
 ```
   $ vagrant plugin install oscar
   $ vagrant plugin install vagrant-hosts
-  $ vagrant pluing install vagrant-reload
+  $ vagrant plugin install vagrant-reload
   $ vagrant plugin install vagrant-multiprovider-snap
 ```
 
